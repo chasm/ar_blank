@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   respond_to :json
   
   def index
-    @users = User.all
+    @users = params[:id] ? User.where('id = ?', params[:id])  : User.all
   end
   
   def create
