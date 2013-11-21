@@ -12,5 +12,5 @@ ArBlank::Application.routes.draw do
     end
   end
   
-  root 'users#index', defaults: { format: :json }
+  root 'site#index'
 end
