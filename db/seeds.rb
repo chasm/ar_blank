@@ -1,7 +1,10 @@
 User.destroy_all
 
 u = User.create(name: "Joe")
-u2 = User.create(name: "Bono")
+u2 = User.create(name: "The Edge")
+u3 = User.create(name: "Sam")
+u4 = User.create(name: "Betty")
+u5 = User.create(name: "Donna")
 
 t = u.posts.create([
   {
@@ -13,12 +16,12 @@ t = u.posts.create([
 comments = Comment.create([
   {
     body: "This is comment 1 on the topic.",
-    post: t,
+    post: t[0],
     user: u2
   },
   {
     body: "This is comment 2 on the topic.",
-    post: t,
+    post: t[0],
     user: u
   }
 ])
