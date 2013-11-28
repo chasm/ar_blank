@@ -20,7 +20,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<button class=\"create\">Add new</button>\n<ul>\n  ";
+  buffer += "<button class=\"show-add-form\">Add new</button>\n<ul>\n  ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.users), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</ul>";
